@@ -191,7 +191,7 @@ textarea:focus {
 .button {
   height: 2.5em;
   border: none;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   width: 355px;
   max-width: 355px;
   font-size: 1em;
@@ -341,4 +341,27 @@ textarea:focus {
 
 .instruction-link {
   color: var(--gold);
+}
+
+.collapsible {
+  color: var(--primary);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+:active, .collapsible:hover {
+  background-color: var(--secondary);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
 }

@@ -5,14 +5,25 @@
     <#elseif section = "header">
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))?no_esc}
     <#elseif section = "form">
+        <#if social.providers??>
+            <p class="para">${msg("selectAlternative")}</p>
+            <div id="social-providers">
+                <#list social.providers as p>
+                <input class="social-link-style" type="button" onclick="location.href='${p.loginUrl}';" value="${p.displayName}"/>
+                </#list>
+            </div>
+        </#if>
         <#if realm.password>
+        <button type="button" class="collapsible">Limited Login</button>
+        <div class="collapsible-content">
+            <p class="para">This login will not work for most users. Please use AAF login.</p>
 
             <form id="kc-form-login" class="login-form" action="${url.loginAction}" method="post">
 
                 <div class="login-landing-img"></div>
 
                     <div class="form-inner-content">
-                    
+
                     <div class="form-title-logo"></div>
 
                     <div>
@@ -94,9 +105,8 @@
                 </div>
 
             </form>
+        </div>
         </#if>
-
-
 
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>

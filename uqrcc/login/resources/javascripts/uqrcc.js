@@ -3,6 +3,7 @@
   handleResetFlow()
   handleDisableResetBtn()
   handleBackAction()
+  handleCollapsible()
 
   function handleBackAction () {
     const backBtn = document.querySelector('.js-back-btn')
@@ -59,6 +60,21 @@
       if (container) {
         container.classList.add('reset-form-container')
       }
+    }
+  }
+
+  function handleCollapsible () {
+    const coll = document.querySelectorAll('.collapsible')
+
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener('click', function () {
+        const content = this.nextElementSibling
+        if (content.style.display === 'block') {
+          content.style.display = 'none'
+        } else {
+          content.style.display = 'block'
+        }
+      })
     }
   }
 })()
