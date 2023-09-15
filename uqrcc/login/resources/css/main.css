@@ -1,14 +1,43 @@
+:root {
+  --blue: #4085c6;
+  --indigo: #48206c;
+  --purple: #51247a;
+  --pink: #962a8b;
+  --red: #e62645;
+  --orange: #eb602b;
+  --yellow: #fbb800;
+  --green: #2ea836;
+  --cyan: #00a2c7;
+  --teal: #00a2c7;
+  --white: #fff;
+  --gray: #999490;
+  --gray-dark: #333245;
+  --primary: #51247a;
+  --secondary: #962a8b;
+  --success: #2ea836;
+  --info: #bb9d65;
+  --warning: #eb602b;
+  --danger: #e62645;
+  --light: #d7d1cc;
+  --dark: #999490;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 676px;
+  --breakpoint-md: 850px;
+  --breakpoint-lg: 1460px;
+  --breakpoint-xl: 1500px;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
   height: 100%;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  background-color: #47494b;
+  background-color: var(--primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,8 +46,8 @@ body {
 input:focus,
 textarea:focus {
   outline: none !important;
-  border-color: #f3f3f3;
-  box-shadow: 0 0 5px #f3f3f3;
+  border-color: var(--light);
+  box-shadow: 0 0 5px var(--light);
 }
 
 .content {
@@ -29,7 +58,7 @@ textarea:focus {
 }
 
 .form-container {
-  background: #fff;
+  background: var(--white);
   width: 100%;
   display: flex;
   max-width: 55em;
@@ -53,25 +82,6 @@ textarea:focus {
   height: 100%;
 }
 
-.login-landing-img {
-  background-image: url(../images/sign-in-user.jpg);
-  background-position: right center;
-  height: 40em;
-  overflow: hidden;
-  width: 100%;
-  flex: 1;
-  background-size: cover;
-}
-
-.login-reset-img {
-  background-image: url(../images/new-password.jpg);
-  height: 40em;
-  overflow: hidden;
-  width: 100%;
-  flex: 1;
-  background-size: cover;
-}
-
 .form-inner-content {
   flex: 1;
   display: flex;
@@ -88,7 +98,7 @@ textarea:focus {
   position: absolute;
   right: 2em;
   top: 2em;
-  color: #7f7f7f;
+  color: var(--gray-dark);
   font-weight: 700;
   cursor: pointer;
 }
@@ -104,25 +114,16 @@ textarea:focus {
   max-width: 18em;
 }
 
-.form-reset-logo {
-  background-image: url(../images/reset-password.svg);
-  height: 100px;
-  width: 150px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
 .form-reset-title {
   font-size: 1.2em;
   margin-top: 1.5em;
-  color: #47494b;
+  color: var(--gray-dark);
 }
 
 .form-reset-description {
   margin: 1em 3em;
   text-align: center;
-  color: #757778;
+  color: var(--gray);
   font-size: 0.9em;
 }
 
@@ -133,16 +134,14 @@ textarea:focus {
 .form-title {
   font-weight: 600;
   text-align: center;
-  color: #47494b;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--gray-dark);
 }
 
 .form-title-subtext {
   font-weight: 300;
   margin: 1em 4em;
   text-align: center;
-  color: #7d7f80;
+  color: var(--gray-dark);
   font-size: 0.9em;
 }
 
@@ -152,29 +151,28 @@ textarea:focus {
   height: 2.5em;
   padding: 0 1em;
   border: none;
-  background: #f3f3f3;
+  background: var(--light);
   border-radius: 0.4em;
   margin: 1em 1em 0;
   font-size: 1em;
   font-weight: 200;
-  font-family: "Open Sans";
 }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #a3a3a3;
+  color: var(--light);
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #a3a3a3;
+  color: var(--light);
 }
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: #a3a3a3;
+  color: var(--light);
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #a3a3a3;
+  color: var(--light);
 }
 
 .form-options {
@@ -186,28 +184,26 @@ textarea:focus {
 }
 
 .form-forgot-password {
-  font-family: "Montserrat";
-  color: #F2CE45;
+  color: var(--yellow);
   font-size: 0.9em;
 }
 
 .button {
   height: 2.5em;
   border: none;
-  background-color: #F2CE45;
+  background-color: var(--secondary);
   width: 355px;
   max-width: 355px;
   font-size: 1em;
   border-radius: 0.4em;
-  color: #fff;
-  font-family: "Open Sans";
+  color: var(--white);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   cursor: pointer;
   font-weight: 800;
 }
 
 .button.disabled {
-  background-color: #bebebe;
+  background-color: var(--gray);
   pointer-events: none;
 }
 
@@ -223,13 +219,13 @@ textarea:focus {
 .disclaimer {
   font-size: 0.8em;
   margin-top: 3em;
-  color: #c8c8c8;
+  color: var(--light);
   text-align: center;
   line-height: 1.5;
 }
 
 .disclaimer-link {
-  color: #a5a5a5;
+  color: var(--gray);
   font-weight: 800;
 }
 
@@ -246,34 +242,33 @@ textarea:focus {
 }
 
 .message-container {
-  background-color: #eaffe6;
+  background-color: var(--white);
   width: 325px;
   text-align: center;
   padding: 0.5em 1em;
-  color: #72d477;
+  color: var(--green);
   border-radius: 0.4em;
   margin: 1em 0 0;
   display: none;
 }
 
 .message-container.error {
-  background-color: #fcefef;
-  color: #ef8171;
+  background-color: var(--white);
+  color: var(--error);
 }
 
 .message-container.warning {
-  background-color: #fff3e6;
-  color: #db916b;
+  background-color: var(--white);
+  color: var(--warning);
 }
 
 .checkbox-container {
-  font-family: "Montserrat";
   display: block;
   position: relative;
   padding-left: 25px;
   cursor: pointer;
   font-size: 0.9em;
-  color: #979797;
+  color: var(--gray);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -288,16 +283,16 @@ textarea:focus {
   width: 15px;
   background-color: transparent;
   border-radius: 0.2em;
-  border: 1px solid #979797;
+  border: 1px solid var(--gray);
   transition: background 200ms ease;
 }
 
 .checkbox-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: var(--light);
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #979797;
+  background-color: var(--gray);
 }
 
 .checkmark:after {
@@ -315,7 +310,7 @@ textarea:focus {
   top: 0px;
   width: 3px;
   height: 9px;
-  border: solid #fff;
+  border: solid var(--white);
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -339,11 +334,11 @@ textarea:focus {
 
 .instruction {
   font-size: 0.9em;
-  color: #47494b;
+  color: var(--gray-dark);
   margin: 1em 3em;
   text-align: center;
 }
 
 .instruction-link {
-  color: #F2CE45;
+  color: var(--gold);
 }

@@ -74,7 +74,7 @@
 
     <div id="global-app-error" class="app-error hidden"></div>
 
-    <script src="${url.resourcesPath}/javascripts/main.js"></script>
+    <script src="${url.resourcesPath}/javascripts/uqrcc.js"></script>
 </body>
 </html>
 </#macro>
