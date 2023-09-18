@@ -5,6 +5,7 @@
     <#elseif section = "header">
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))?no_esc}
     <#elseif section = "form">
+        <h2>UQ HPC Bunya</h2>
         <#if social.providers??>
             <p class="para">${msg("selectAlternative")}</p>
             <div id="social-providers">
@@ -95,12 +96,16 @@
                     <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!} form-group">
                         <input class="button ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="Sign in"/>
                     </div>
-                
                 </div>
 
             </form>
         </div>
         </#if>
+        <p class="disclaimer">
+            By signing in, you agree to the<br>
+            <a class="disclaimer-link" href="https://github.com/UQ-RCC/hpc-docs/blob/main/media/Bunya-access-conditions.png" target="_blank">Bunya Access Conditions</a> &
+            <a class="disclaimer-link" href="https://ppl.app.uq.edu.au/content/6.20.06-acceptable-use-uq-ict-resources target="_blank">UQ Acceptable Use of ICT Resources Policy</a>.
+        </p>
 
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
@@ -109,10 +114,5 @@
                 <p><a href="${url.registrationUrl}">${msg("registerLink")}</a></p>
             </div>
         </#if>
-        <p class="disclaimer">
-            By signing in, you agree to the Bunya<br>
-            <a class="disclaimer-link" href="https://github.com/UQ-RCC/hpc-docs/blob/main/media/Bunya-access-conditions.png" target="_blank">Bunya Access Conditions</a> &
-            <a class="disclaimer-link" href="https://ppl.app.uq.edu.au/content/6.20.06-acceptable-use-uq-ict-resources target="_blank">UQ Acceptable Use of ICT Resources Policy</a>.
-        </p>
     </#if>
 </@layout.registrationLayout>
