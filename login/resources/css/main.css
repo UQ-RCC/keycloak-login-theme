@@ -358,7 +358,7 @@ button:disabled,
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-button:active, .button:active, .collapsible:hover, button:hover, .button:hover {
+button:active, .button:active, .collapsible:hover, button:hover, .button:hover, .social-link-style:hover {
   background-color: var(--secondary);
 }
 
